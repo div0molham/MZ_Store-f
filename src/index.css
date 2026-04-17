@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 7%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 18% 11%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 18% 11%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 20 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 0 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 20 100% 55%;
+
+    --radius: 0.75rem;
+
+    --fire-from: 20 100% 55%;
+    --fire-to: 0 85% 50%;
+    --gold: 45 100% 60%;
+    --success: 140 70% 45%;
+    --neon-glow: 20 100% 55%;
+
+    --sidebar-background: 220 20% 7%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 20 100% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 20 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Orbitron', sans-serif;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  .text-gradient-fire {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--fire-from)), hsl(var(--fire-to)));
+  }
+  .bg-gradient-fire {
+    background-image: linear-gradient(135deg, hsl(var(--fire-from)), hsl(var(--fire-to)));
+  }
+  .glow-fire {
+    box-shadow: 0 0 20px hsl(var(--neon-glow) / 0.3), 0 0 60px hsl(var(--neon-glow) / 0.1);
+  }
+  .glow-fire-sm {
+    box-shadow: 0 0 10px hsl(var(--neon-glow) / 0.2);
+  }
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px hsl(var(--neon-glow) / 0.2);
+  }
+}
