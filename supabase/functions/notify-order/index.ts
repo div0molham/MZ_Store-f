@@ -88,7 +88,7 @@ Deno.serve(async (req) => {
         </table>
         <hr style="border-color:#333;margin:16px 0;" />
         <h2 style="color:#4ade80;text-align:center;">💰 الإجمالي: ${total} EGP</h2>
-        <p style="text-align:center;color:#999;font-size:12px;margin-top:16px;">💵 الدفع كاش عند التسليم</p>
+        <p style="text-align:center;color:#999;font-size:12px;margin-top:16px;">💵 بعد التاكيد يتم تحديد وسيلة الدفع </p>
       </div>
     `;
 
