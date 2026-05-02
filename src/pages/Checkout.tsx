@@ -188,7 +188,7 @@ const Checkout = () => {
               <span className="font-display text-2xl font-bold text-gold">{grandTotal} EGP</span>
             </div>
           </div>
-          <div className="text-sm text-muted-foreground mb-4 text-center">💵 الدفع كاش عند التسليم</div>
+          <div className="text-sm text-muted-foreground mb-4 text-center">💵بعد التاكيد يتم تحديد وسيلة الدفع</div>
           <button
             onClick={handleOrder}
             disabled={loading}
